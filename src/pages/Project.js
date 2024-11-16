@@ -59,7 +59,7 @@ const Projects = () => {
         </ul>
 
         <h4>Lien vers le projet déployé</h4>
-        <p><a href="https://lien-vers-projet-deploye.com" target="_blank" rel="noopener noreferrer">👉 EcoShop - Déployé sur Netlify</a></p>
+        <p><a href="https://ecoshopuvs.netlify.app/" target="_blank" rel="noopener noreferrer">👉 EcoShop - Déployé sur Netlify</a></p>
       `,
       imageUrl:ecoshop , 
     }
@@ -74,9 +74,6 @@ const Projects = () => {
             <h3>{project.title}</h3>
             {project.imageUrl && <img src={project.imageUrl} alt={`Capture de ${project.title}`} />}
             <div dangerouslySetInnerHTML={{ __html: project.description }} />
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              Voir le projet
-            </a>
           </div>
         ))}
       </div>

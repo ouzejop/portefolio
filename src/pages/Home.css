@@ -1,0 +1,63 @@
+.logo {
+    width: 300px;    /* Ajustez la largeur de l'image selon vos besoins */
+    height: 300px;    /* Maintient les proportions */
+    margin-right: 50px; /* Espace entre l'image et le titre */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+}
+.ouz {
+    color: rgb(52, 120, 221);
+    text-size-adjust: 10p0x;
+}
+.home {
+    display: flex; /* Utilise flexbox pour organiser les éléments en ligne */
+    align-items: center; /* Centre verticalement les éléments */
+    height: 80vh; /* Prend toute la hauteur de la fenêtre */
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  /* Section de la présentation */
+  .presentation {
+    flex: 1; /* Prend tout l'espace disponible sauf celui occupé par la photo */
+    margin-left: 57px; /* Ajoute un peu d'espace à gauche */
+    text-align: left; /* Aligne le texte à gauche */
+  }
+  
+  .presentation h2 {
+    margin-bottom: 10px; /* Ajoute un espacement sous le titre */
+    font-size: 5rem; /* Augmente la taille du titre */
+  }
+  
+  .presentation p {
+    font-size: 2.8rem; /* Ajuste la taille du texte de présentation */
+  }
+  
+  .description {
+    font-size: 1rem;
+    top: -10px;
+  }
+  .description {
+    position: relative; /* Nécessaire pour utiliser top */
+    top: -20px; /* Monte la description de 20px */
+    line-height: 1.5; /* Espacement entre les lignes */
+  }
+  
+  
+  /* Section de la photo */
+  .photo {
+    width: 120px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+    flex: 1; /* Prend un espace équivalent à celui de la présentation */
+    display: flex;
+    justify-content: center; /* Centre la photo horizontalement */
+    align-items: center;
+  }
+  
+
+  

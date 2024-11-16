@@ -1,0 +1,79 @@
+/* Fichier : Header.css */
+
+/* Style pour le header */
+.header {
+    display: flex;
+    flex-direction: row; /* Met les éléments en colonne */
+    align-items: center;    /* Centre les éléments horizontalement */
+    background-color: #f8f9fa;
+    height: 100px;
+    width: auto;
+    gap: 450px;
+  }
+  @media screen and (max-width:768px) {
+    .header {
+        
+        gap: 300px;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style pour la zone du logo */
+  .logo {
+    display: flex;
+    flex-direction: column; /* Colonne pour image + titre */
+    align-items: center;    /* Centre l'image et le titre */
+    margin-bottom: 20px;
+  }
+  
+  .lien {
+    text-decoration: none;
+    color: black; /* Couleur par défaut */
+  }
+  
+  .lien.active {
+    color: rgb(84, 164, 230); /* Couleur pour le lien actif */
+    font-weight: bold; /* Optionnel : mettre en gras */
+  }
+  
+  
+  /* Style pour le titre */
+  .logo h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    
+  }
+  
+  /* Style pour la navigation */
+  nav {
+    margin-top: 20px; /* Ajoute un espace au-dessus de la navigation */
+  }
+  
+  /* Style pour la liste de navigation */
+  nav ul {
+    list-style-type: none; /* Enlève les puces de la liste */
+    display: flex;
+    gap: 20px; /* Espace entre les éléments de la liste */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style pour les liens */
+  .lien {
+    text-decoration: none; /* Enlève la décoration */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease; /* Animation lors du survol */
+  }
+  
+  /* Style pour les liens au survol */
+  .lien:hover {
+    color: #007bff; /* Change la couleur au survol */
+  }
+  

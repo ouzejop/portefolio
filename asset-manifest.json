@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portefolio/static/css/main.a3cbaf3f.css",
-    "main.js": "/portefolio/static/js/main.8accc70a.js",
-    "static/js/453.db175375.chunk.js": "/portefolio/static/js/453.db175375.chunk.js",
-    "static/media/ecoshop.png": "/portefolio/static/media/ecoshop.6d434b2bf38105424d2d.png",
-    "static/media/logo.jpeg": "/portefolio/static/media/logo.eca5d7d32f7414970111.jpeg",
-    "index.html": "/portefolio/index.html",
-    "main.a3cbaf3f.css.map": "/portefolio/static/css/main.a3cbaf3f.css.map",
-    "main.8accc70a.js.map": "/portefolio/static/js/main.8accc70a.js.map",
-    "453.db175375.chunk.js.map": "/portefolio/static/js/453.db175375.chunk.js.map"
+    "main.css": "/static/css/main.a3cbaf3f.css",
+    "main.js": "/static/js/main.6e5d116e.js",
+    "static/js/453.db175375.chunk.js": "/static/js/453.db175375.chunk.js",
+    "static/media/ecoshop.png": "/static/media/ecoshop.6d434b2bf38105424d2d.png",
+    "static/media/logo.jpeg": "/static/media/logo.eca5d7d32f7414970111.jpeg",
+    "index.html": "/index.html",
+    "main.a3cbaf3f.css.map": "/static/css/main.a3cbaf3f.css.map",
+    "main.6e5d116e.js.map": "/static/js/main.6e5d116e.js.map",
+    "453.db175375.chunk.js.map": "/static/js/453.db175375.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3cbaf3f.css",
-    "static/js/main.8accc70a.js"
+    "static/js/main.6e5d116e.js"
   ]
 }

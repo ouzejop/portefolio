@@ -68,4 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# portefolio
+
+
+
+portfolio-react/
+├── public
+│   └── index.html
+├── src
+│   ├── assets          # Dossier pour les images et captures d'écran
+│   ├── components      # Composants React réutilisables
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── ProjectCard.js
+│   │   └── ContactForm.js
+│   ├── pages           # Différentes pages du portfolio
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   └── Projects.js
+│   ├── styles          # Styles CSS ou SASS
+│   │   └── App.css
+│   ├── App.js          # Composant principal
+│   ├── index.js        # Point d'entrée pour React
+│   └── ...
+├── package.json
+└── README.md

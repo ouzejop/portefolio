@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a3cbaf3f.css",
-    "main.js": "/static/js/main.6e5d116e.js",
+    "main.css": "/static/css/main.5af8f69e.css",
+    "main.js": "/static/js/main.d5c63549.js",
     "static/js/453.db175375.chunk.js": "/static/js/453.db175375.chunk.js",
     "static/media/ecoshop.png": "/static/media/ecoshop.6d434b2bf38105424d2d.png",
     "static/media/logo.jpeg": "/static/media/logo.eca5d7d32f7414970111.jpeg",
     "index.html": "/index.html",
-    "main.a3cbaf3f.css.map": "/static/css/main.a3cbaf3f.css.map",
-    "main.6e5d116e.js.map": "/static/js/main.6e5d116e.js.map",
+    "main.5af8f69e.css.map": "/static/css/main.5af8f69e.css.map",
+    "main.d5c63549.js.map": "/static/js/main.d5c63549.js.map",
     "453.db175375.chunk.js.map": "/static/js/453.db175375.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3cbaf3f.css",
-    "static/js/main.6e5d116e.js"
+    "static/css/main.5af8f69e.css",
+    "static/js/main.d5c63549.js"
   ]
 }

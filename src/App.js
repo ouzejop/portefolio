@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/portefolio"> {/* Ajoutez le basename ici */}
+    <Router basename="/portefolio"> 
       <div className="App">
         <Header />
         <Routes>

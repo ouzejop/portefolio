@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test LPS Function</title>
+</head>
+<body>
+  <h1>Test de la fonction LPS</h1>
+  <p>Ouvre la console pour voir le résultat.</p>
+
+  <script>
+    // Code JavaScript corrigé
+    function LPS(P = []) {
+      let i = 1; // i commence à 1 car LPS[0] est toujours 0
+      let j = 0; // j pointe sur la longueur du préfixe/suffixe
+      let m = P.length;
+      let LPS = Array(m).fill(0); // Initialisation avec des 0
+
+      while (i < m) {
+        if (P[i] === P[j]) {
+          j++;
+          LPS[i] = j;
+          i++;
+        } else {
+          if (j === 0) {
+            LPS[i] = 0;
+            i++;
+          } else {
+            j = LPS[j - 1]; // Reculer pour vérifier le préfixe précédent
+          }
+        }
+      }
+
+      console.log(LPS);
+      return LPS;
+    }
+
+
+
+    function KMP(T = [],P = []){
+        let j=0, i=0;
+        let n = T.length, m = P.length;
+        let lps = Array(m).fill(0);
+        lps = LPS(P);
+        while(i<n && j!=m){
+            if(T[i] === P[j]){
+                i++;j++;
+            }
+            else {
+                if(j === 0){
+                    i++;
+                }
+                else{
+                    j=lps[j-1]
+                }
+            }
+            console.log(i,j)
+
+        }
+        console.log(j)
+        if (j === m){
+            console.log('motif trouve')
+        }
+        else
+            console.log("motif non trouver")
+    }
+    KMP("abaadeabaabae","abaaba")
+  </script>
+</body>
+</html>

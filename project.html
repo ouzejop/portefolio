@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>projet</title>
+	<link rel="stylesheet" href="projet.css">
+</head>
+<body>
+	<header class="header">
+  <div>Ouzdev.</div>
+  <nav>
+    <ul>
+      <li>
+        <a href="./home2.html" class="lien">Accueil</a> <!-- Ajouter la classe 'active' dynamiquement -->
+      </li>
+      <li>
+        <a href="/projects" class="lien active">Projets</a>
+      </li>
+      <li>
+        <a href="/about" class="lien">À propos</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+	
+<div class="eco-project-card">
+  <div class="eco-header-section">
+      <img src="/api/placeholder/400/300" alt="EcoShop" class="eco-project-image">
+      <h2 class="eco-title">EcoShop</h2>
+  </div>
+
+  <h3 class="eco-subtitle">Description détaillée du projet EcoShop</h3>
+  <p class="eco-text"><strong>EcoShop</strong> est un projet de plateforme e-commerce innovante, axée sur la vente de produits écologiques. Développé sur une période d'un mois, ce projet combine un design moderne, une architecture modulaire, et des fonctionnalités interactives pour offrir une expérience utilisateur fluide.</p>
+
+  <div class="eco-section">
+      <h4 class="eco-section-title">Objectifs du projet</h4>
+      <ul class="eco-list">
+          <li class="eco-list-item"><strong>Promouvoir des produits écologiques :</strong> Offrir une plateforme mettant en avant des articles respectueux de l'environnement.</li>
+          <li class="eco-list-item"><strong>Créer une expérience utilisateur moderne :</strong> Utilisation d'une interface intuitive, responsive, et adaptée aux mobiles.</li>
+          <li class="eco-list-item"><strong>Développer un projet complet :</strong> Inclure toutes les fonctionnalités clés d'un site e-commerce.</li>
+      </ul>
+  </div>
+
+  <div class="eco-section">
+      <h4 class="eco-section-title">Technologies utilisées</h4>
+      <div class="eco-tags-container">
+          <span class="eco-tag">React</span>
+          <span class="eco-tag">React Router</span>
+          <span class="eco-tag">styled-components</span>
+          <span class="eco-tag">Context API</span>
+          <span class="eco-tag">FakeStore API</span>
+          <span class="eco-tag">Jest</span>
+      </div>
+  </div>
+
+  <div class="eco-section">
+      <h4 class="eco-section-title">Défis et solutions</h4>
+      <div class="eco-challenge-card">
+          <h5 class="eco-challenge-title">Problème d'intégration du panier</h5>
+          <p class="eco-text"><strong>Défi :</strong> Les informations des produits ajoutés depuis la page d'accueil et la page produit n'étaient pas uniformes.</p>
+          <p class="eco-text"><strong>Solution :</strong> Centralisation des données via le CartContext et unification de la logique d'ajout.</p>
+      </div>
+      <div class="eco-challenge-card">
+          <h5 class="eco-challenge-title">Gestion du thème jour/nuit</h5>
+          <p class="eco-text"><strong>Défi :</strong> Adapter tous les composants, y compris ceux dynamiques comme le panier ou les formulaires.</p>
+          <p class="eco-text"><strong>Solution :</strong> Utilisation de Context API pour appliquer des styles cohérents.</p>
+      </div>
+  </div>
+
+  <div style="text-align: center;">
+      <a href="https://ecoshopuvs.netlify.app/" target="_blank" rel="noopener noreferrer" class="eco-project-link">
+          👉 Voir le projet
+      </a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+* {
+  font-family: 'Calibre', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* Header */
+  .header {
+    font-family: 'Calibre', sans-serif;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+  
+  .header div {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .lien {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .lien:hover, .active {
+    color: var(--text-primary);
+  }
+
+
+
+  :root {
+    --bg-color: #0a192f;
+    --text-primary: #64ffda;
+    --text-secondary: #8892b0;
+    --header-height: 70px;
+  }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+
+    .eco-project-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .eco-header-section {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .eco-project-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+  }
+
+  .eco-title {
+      color: #2d3748;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .eco-subtitle {
+      color: #4a5568;
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+  }
+
+  .eco-section-title {
+      color: #4a5568;
+      font-size: 1.25rem;
+      margin: 1.5rem 0 1rem;
+  }
+
+  .eco-text {
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+  }
+
+  .eco-section {
+      margin: 2rem 0;
+  }
+
+  .eco-list {
+      list-style: none;
+      padding-left: 1.5rem;
+  }
+
+  .eco-list-item {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #4a5568;
+  }
+
+  .eco-list-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      background-color: #48bb78;
+      border-radius: 50%;
+  }
+
+  .eco-tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+  }
+
+  .eco-tag {
+      background-color: #ebf4ff;
+      color: #4299e1;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+  }
+
+  .eco-challenge-card {
+      background-color: #f7fafc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+  }
+
+  .eco-challenge-title {
+      color: #2d3748;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .eco-project-link {
+      display: inline-block;
+      background-color: #48bb78;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      transition: background-color 0.3s;
+  }
+
+  .eco-project-link:hover {
+      background-color: #38a169;
+  }
+
+  @media (max-width: 768px) {
+      .eco-project-card {
+          padding: 1rem;
+      }
+
+      .eco-project-image {
+          height: 200px;
+      }
+
+      .eco-tags-container {
+          gap: 0.25rem;
+      }
+
+      .eco-tag {
+          font-size: 0.75rem;
+          padding: 0.25rem 0.75rem;
+      }
+  }

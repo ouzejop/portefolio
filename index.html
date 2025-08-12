@@ -32,6 +32,7 @@
             align-items: center;
             padding: 2rem 0;
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .sidebar-logo {
@@ -97,7 +98,7 @@
             align-items: center;
             justify-content: space-between;
             min-height: 100vh;
-            padding: 0 4rem;
+            padding: 0 clamp(1rem, 5vw, 4rem);
             position: relative;
         }
 
@@ -107,14 +108,14 @@
         }
 
         .hero-greeting {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(1.8rem, 4vw, 4.5rem);
             font-weight: 300;
             margin-bottom: 1rem;
             color: #fff;
         }
 
         .hero-name {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(1.8rem, 4vw, 4.5rem);
             font-weight: 700;
             margin: 0.5rem 0;
             color: #fff;
@@ -129,22 +130,23 @@
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(1.8rem, 4vw, 4.5rem);
             font-weight: 300;
             color: #fff;
             margin-bottom: 1rem;
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: #888;
             margin-bottom: 3rem;
-            max-width: 400px;
+            max-width: 90%;
+            line-height: 1.6;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
             background: transparent;
             color: #00ffd1;
             border: 2px solid #00ffd1;
@@ -154,6 +156,7 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             border-radius: 0;
+            font-size: clamp(0.8rem, 2vw, 1rem);
         }
 
         .cta-button:hover {
@@ -170,7 +173,7 @@
         }
 
         .giant-logo {
-            font-size: clamp(15rem, 25vw, 30rem);
+            font-size: clamp(6rem, 20vw, 30rem);
             font-weight: 900;
             background: linear-gradient(135deg, #00ffd1 0%, #ff4757 100%);
             -webkit-background-clip: text;
@@ -262,7 +265,7 @@
 
         /* Section À propos */
         .about {
-            padding: 8rem 4rem;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 4rem);
             background: #111;
         }
 
@@ -273,23 +276,24 @@
         }
 
         .section-number {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             color: #00ffd1;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .section-title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             color: white;
             margin-bottom: 2rem;
         }
 
         .section-description {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: #888;
-            max-width: 600px;
+            max-width: 100%;
+            line-height: 1.6;
         }
 
         .about-content {
@@ -297,19 +301,19 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            gap: clamp(3rem, 6vw, 6rem);
             align-items: start;
         }
 
         .about-text {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             line-height: 1.8;
             color: #ccc;
         }
 
         .about-text h3 {
             color: #00ffd1;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
@@ -321,14 +325,14 @@
         /* Compétences */
         .skills-container {
             background: #1a1a1a;
-            padding: 3rem;
+            padding: clamp(2rem, 4vw, 3rem);
             border-radius: 20px;
             border: 1px solid #333;
         }
 
         .skills-title {
             color: #00ffd1;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             margin-bottom: 3rem;
             font-weight: 600;
         }
@@ -342,17 +346,20 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .skill-name {
             font-weight: 600;
             color: white;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .skill-percentage {
             color: #888;
             font-weight: 600;
+            font-size: clamp(0.8rem, 2vw, 1rem);
         }
 
         .skill-bar {
@@ -372,7 +379,7 @@
 
         /* Section Projects */
         .projects {
-            padding: 8rem 4rem;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 4rem);
             background: #1a1a1a;
         }
 
@@ -380,8 +387,8 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+            gap: clamp(2rem, 4vw, 3rem);
         }
 
         .project-card {
@@ -401,7 +408,7 @@
 
         .project-image {
             width: 100%;
-            height: 250px;
+            height: clamp(200px, 25vw, 250px);
             background: linear-gradient(135deg, #00ffd1, #ff4757);
             display: flex;
             align-items: center;
@@ -422,18 +429,18 @@
         }
 
         .project-image svg {
-            width: 60px;
-            height: 60px;
+            width: clamp(40px, 8vw, 60px);
+            height: clamp(40px, 8vw, 60px);
             color: white;
             z-index: 1;
         }
 
         .project-content {
-            padding: 2.5rem;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 1rem;
             color: white;
             font-weight: 600;
@@ -443,6 +450,7 @@
             color: #888;
             line-height: 1.6;
             margin-bottom: 2rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .project-tech {
@@ -455,22 +463,24 @@
         .tech-tag {
             background: rgba(0, 255, 209, 0.1);
             color: #00ffd1;
-            padding: 0.4rem 1rem;
+            padding: clamp(0.3rem, 1vw, 0.4rem) clamp(0.8rem, 2vw, 1rem);
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1.5vw, 0.85rem);
             border: 1px solid rgba(0, 255, 209, 0.3);
+            white-space: nowrap;
         }
 
         .project-links {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .project-link {
             color: #888;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             transition: color 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -482,7 +492,7 @@
 
         /* Contact Section */
         .contact {
-            padding: 8rem 4rem;
+            padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 4rem);
             background: #111;
             text-align: center;
         }
@@ -492,7 +502,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: clamp(2rem, 6vw, 4rem);
         }
 
         .contact-info {
@@ -501,14 +511,14 @@
 
         .contact-info h3 {
             color: #00ffd1;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 2rem;
             font-weight: 600;
         }
 
         .contact-item {
             margin-bottom: 1.5rem;
-            padding: 1.5rem;
+            padding: clamp(1rem, 3vw, 1.5rem);
             background: #1a1a1a;
             border-radius: 15px;
             border: 1px solid #333;
@@ -518,15 +528,18 @@
             color: white;
             display: block;
             margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         .contact-item span {
             color: #888;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            word-break: break-word;
         }
 
         .social-networks h3 {
             color: #00ffd1;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 2rem;
             font-weight: 600;
             text-align: left;
@@ -542,7 +555,7 @@
         .social-link {
             display: flex;
             align-items: center;
-            padding: 1.5rem;
+            padding: clamp(1rem, 3vw, 1.5rem);
             background: #1a1a1a;
             border-radius: 15px;
             text-decoration: none;
@@ -562,6 +575,7 @@
             width: 30px;
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .social-icon svg {
@@ -569,37 +583,79 @@
             height: 20px;
         }
 
+        .social-link strong {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .social-link small {
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        }
+
         /* Footer */
         .footer {
             background: #0a0a0a;
-            padding: 3rem 4rem;
+            padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem);
             text-align: center;
             margin-left: 80px;
         }
 
         .footer-text {
             color: #666;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
         }
 
-        /* Mobile Responsive */
+        /* Media Queries pour une responsivité optimisée */
+        
+        /* Tablettes en portrait */
+        @media (max-width: 1024px) {
+            .about-content {
+                gap: 4rem;
+            }
+            
+            .contact-content {
+                gap: 3rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        /* Tablettes et petits écrans */
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
-                height: 60px;
+                height: 70px;
                 flex-direction: row;
                 justify-content: space-between;
-                padding: 0 1rem;
+                padding: 0 1.5rem;
+                top: 0;
+                left: 0;
+            }
+
+            .sidebar-logo {
+                margin-bottom: 0;
+                margin-right: 1rem;
             }
 
             .sidebar-nav {
                 flex-direction: row;
-                gap: 1rem;
+                gap: 1.5rem;
+            }
+
+            .sidebar-nav a.active::after {
+                right: auto;
+                bottom: -10px;
+                top: auto;
+                transform: translateX(-50%);
+                width: 20px;
+                height: 3px;
+                left: 50%;
             }
 
             .main-content {
                 margin-left: 0;
-                margin-top: 60px;
+                margin-top: 70px;
             }
 
             .hero {
@@ -607,10 +663,12 @@
                 text-align: center;
                 padding: 2rem 1rem;
                 gap: 2rem;
+                min-height: calc(100vh - 70px);
             }
 
             .hero-text {
                 order: 2;
+                max-width: 100%;
             }
 
             .hero-logo {
@@ -618,7 +676,7 @@
             }
 
             .giant-logo {
-                font-size: clamp(8rem, 40vw, 12rem);
+                font-size: clamp(8rem, 25vw, 12rem);
             }
 
             .about-content,
@@ -631,12 +689,140 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero, .about, .projects, .contact {
-                padding: 4rem 1rem;
+            .footer {
+                margin-left: 0;
+            }
+
+            .skill-header {
+                gap: 1rem;
+            }
+        }
+
+        /* Smartphones */
+        @media (max-width: 480px) {
+            .sidebar {
+                height: 60px;
+                padding: 0 1rem;
+            }
+
+            .sidebar-nav {
+                gap: 1rem;
+            }
+
+            .main-content {
+                margin-top: 60px;
+            }
+
+            .hero {
+                padding: 1rem;
+                min-height: calc(100vh - 60px);
+            }
+
+            .giant-logo {
+                font-size: clamp(6rem, 30vw, 10rem);
+            }
+
+            .section-header {
+                margin-bottom: 3rem;
+            }
+
+            .skills-container {
+                padding: 1.5rem;
+            }
+
+            .skills-title {
+                margin-bottom: 2rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .contact-item,
+            .social-link {
+                padding: 1rem;
+            }
+
+            .tech-tag {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.75rem;
+            }
+
+            .project-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .social-links {
+                gap: 0.75rem;
+            }
+        }
+
+        /* Très petits écrans */
+        @media (max-width: 360px) {
+            .hero-subtitle {
+                margin-bottom: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.8rem;
+            }
+
+            .skills-container {
+                padding: 1rem;
+            }
+
+            .project-card {
+                border-radius: 15px;
+            }
+
+            .contact-item,
+            .social-link {
+                border-radius: 10px;
+            }
+        }
+
+        /* Écrans ultra-larges */
+        @media (min-width: 1920px) {
+            .hero {
+                padding: 0 6rem;
+            }
+
+            .about,
+            .projects,
+            .contact {
+                padding: 10rem 6rem;
             }
 
             .footer {
-                margin-left: 0;
+                padding: 4rem 6rem;
+            }
+        }
+
+        /* Orientation paysage sur mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: 100vh;
+                padding: 1rem;
+            }
+
+            .giant-logo {
+                font-size: clamp(4rem, 15vw, 8rem);
+            }
+
+            .hero-text {
+                order: 1;
+            }
+
+            .hero-logo {
+                order: 2;
+            }
+
+            .about,
+            .projects,
+            .contact {
+                padding: 3rem 1rem;
             }
         }
 
@@ -672,6 +858,33 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: #00ffd1;
+        }
+
+        /* Amélioration de l'accessibilité */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mode sombre forcé pour certains navigateurs */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: white;
+            }
+        }
+
+        /* Optimisations pour les écrans haute densité */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .giant-logo,
+            .project-image svg {
+                image-rendering: -webkit-optimize-contrast;
+            }
         }
     </style>
 </head>
@@ -722,7 +935,6 @@
             <div class="hero-text">
                 <div class="hero-greeting">Salut,</div>
                 <div class="hero-name">Je suis <span class="highlight">Ousmane</span>,</div>
-                <!--<div class="hero-title">développeur fullstack.</div>-->
                 <p class="hero-subtitle">Étudiant passionné créant des expériences digitales innovantes et des solutions technologiques modernes.</p>
                 <a href="#contact" class="cta-button">Contactez-moi</a>
             </div>
@@ -878,8 +1090,8 @@
                         </svg>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Amelioration de la qualite des images</h3>
-                        <p class="project-description">Application web permettant d'ameliorer la qualite des images avec les technologies de l'IA.</p>
+                        <h3 class="project-title">Amélioration de la qualité des images</h3>
+                        <p class="project-description">Application web permettant d'améliorer la qualité des images avec les technologies de l'IA.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML / CSS</span>
                             <span class="tech-tag">Keras</span>
@@ -901,7 +1113,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Site de E-commerce</h3>
-                        <p class="project-description">Front-End d'un site permettant de passer different commande en ligne et de payer a la livraison.</p>
+                        <p class="project-description">Front-End d'un site permettant de passer différentes commandes en ligne et de payer à la livraison.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">FakeStoreAPI</span>
@@ -922,7 +1134,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Site de recherche d'emploi "Ligeey"</h3>
-                        <p class="project-description">Ce site permet aux chercheurs d'emploies de reseigner leur profil et aux recruteurs de retrouver les profils qui leur correspond.</p>
+                        <p class="project-description">Ce site permet aux chercheurs d'emploi de renseigner leur profil et aux recruteurs de retrouver les profils qui leur correspondent.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Spring-boot</span>
                             <span class="tech-tag">Angular</span>
@@ -930,8 +1142,8 @@
                             <span class="tech-tag">TypeScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Paameth/Front_Liggey" class="project-link">Code source front →</a>
-                            <a href="https://github.com/Paameth/Back_Liggey" class="project-link">Code source back →</a>
+                            <a href="https://github.com/Paameth/Front_Liggey" class="project-link">Code front →</a>
+                            <a href="https://github.com/Paameth/Back_Liggey" class="project-link">Code back →</a>
                         </div>
                     </div>
                 </div>
@@ -974,7 +1186,7 @@
                     
                     <div class="contact-item">
                         <strong>Email</strong>
-                        <span>diopousmane779@email.com</span>
+                        <span>diopousmane779@gmail.com</span>
                     </div>
                     
                     <div class="contact-item">
@@ -1014,19 +1226,7 @@
                                 <small>Code source & projets</small>
                             </div>
                         </a>
-                        <!--
-                        <a href="#" class="social-link instagram" title="Instagram">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.374.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Instagram</strong><br>
-                                <small>Créations visuelles</small>
-                            </div>
-                        </a>
-                    -->
+                        
                         <a href="mailto:diopousmane779@gmail.com" class="social-link email" title="Email">
                             <div class="social-icon">
                                 <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -1131,30 +1331,6 @@
             });
         });
 
-        // Animation du logo géant au hover
-        const giantLogo = document.querySelector('.giant-logo');
-        let isAnimating = false;
-
-        /*
-        giantLogo.addEventListener('mouseenter', () => {
-            if (!isAnimating) {
-                isAnimating = true;
-                giantLogo.style.animation = 'none';
-                giantLogo.style.transform = 'rotate(-5deg) scale(1.1)';
-                giantLogo.style.background = 'linear-gradient(135deg, #ff4757 0%, #00ffd1 100%)';
-            }
-        });
-
-        giantLogo.addEventListener('mouseleave', () => {
-            giantLogo.style.transform = 'rotate(-10deg) scale(1)';
-            giantLogo.style.background = 'linear-gradient(135deg, #00ffd1 0%, #ff4757 100%)';
-            setTimeout(() => {
-                giantLogo.style.animation = 'logoFloat 6s ease-in-out infinite';
-                isAnimating = false;
-            }, 300);
-        });
-        */
-
         // Animation au chargement de la page
         window.addEventListener('load', () => {
             // Fade in des éléments principaux
@@ -1171,40 +1347,32 @@
             });
         });
 
-        // Gestion du menu mobile
+        // Gestion du menu mobile améliorée
         function initMobileMenu() {
             const sidebar = document.querySelector('.sidebar');
+            let isMenuVisible = true;
+            let lastScrollTop = 0;
             
-            // Événements tactiles pour mobile
-            let touchStartY = 0;
-            let touchEndY = 0;
-            
-            document.addEventListener('touchstart', e => {
-                touchStartY = e.changedTouches[0].screenY;
-            });
-            
-            document.addEventListener('touchend', e => {
-                touchEndY = e.changedTouches[0].screenY;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                const swipeDistance = touchEndY - touchStartY;
-                if (Math.abs(swipeDistance) > 50) {
-                    if (swipeDistance > 0) {
-                        // Swipe vers le bas - cacher la navigation
+            // Auto-hide navigation sur mobile lors du scroll
+            if (window.innerWidth <= 768) {
+                window.addEventListener('scroll', () => {
+                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (currentScroll > lastScrollTop && currentScroll > 100) {
+                        // Scroll vers le bas - cacher la navigation
                         sidebar.style.transform = 'translateY(-100%)';
+                        isMenuVisible = false;
                     } else {
-                        // Swipe vers le haut - afficher la navigation
+                        // Scroll vers le haut - afficher la navigation
                         sidebar.style.transform = 'translateY(0)';
+                        isMenuVisible = true;
                     }
-                }
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }, { passive: true });
             }
         }
 
-        initMobileMenu();
-
-        // Performance: Debounce pour les événements de scroll
+        // Optimisation des performances avec debounce
         function debounce(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -1217,143 +1385,201 @@
             };
         }
 
-        // Appliquer debounce aux événements de scroll
-        window.addEventListener('scroll', debounce(updateActiveNav, 10));
-
-        // Gestion des erreurs JavaScript
-        window.addEventListener('error', function(e) {
-            console.log('Erreur capturée:', e.message);
-        });
-
-        // Service Worker pour la mise en cache (optionnel)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW enregistré avec succès:', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('Échec de l\'enregistrement du SW:', registrationError);
+        // Lazy loading des images si nécessaire
+        function initLazyLoading() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                                imageObserver.unobserve(img);
+                            }
+                        }
                     });
-            });
-        }
-
-        // Analytics et tracking
-        function trackEvent(eventName, eventData) {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', eventName, eventData);
-            }
-        }
-
-        // Tracker les clics sur les projets
-        document.querySelectorAll('.project-card').forEach((card, index) => {
-            card.addEventListener('click', () => {
-                trackEvent('project_click', {
-                    project_index: index,
-                    project_name: card.querySelector('.project-title').textContent
                 });
-            });
-        });
 
-        // Tracker les clics sur les liens sociaux
-        document.querySelectorAll('.social-link').forEach(link => {
-            link.addEventListener('click', () => {
-                trackEvent('social_click', {
-                    platform: link.querySelector('strong').textContent
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
                 });
-            });
-        });
-
-        // Effet de typing pour le texte d'accueil
-        function typeEffect(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
             }
-            type();
-        }
-
-        // Animation supplémentaire au scroll
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.offsetHeight;
-            const winHeight = window.innerHeight;
-            const scrollPercent = scrollTop / (docHeight - winHeight);
-            
-            // Effet parallaxe sur le logo géant
-            const heroLogo = document.querySelector('.giant-logo');
-            if (heroLogo) {
-                heroLogo.style.transform = `rotate(-10deg) translateY(${scrollTop * 0.1}px)`;
-            }
-        });
-
-        // Optimisation des performances
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        if (mediaQuery.matches) {
-            // Réduire les animations pour les utilisateurs qui préfèrent moins de mouvement
-            document.documentElement.style.setProperty('--animation-duration', '0.1s');
-        }
-
-        // Lazy loading des images (si nécessaire)
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // Gestion du thème (mode sombre/clair) - optionnel
-        function initThemeToggle() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-            
-            prefersDark.addEventListener('change', (e) => {
-                if (e.matches) {
-                    document.body.classList.add('dark-theme');
-                } else {
-                    document.body.classList.remove('dark-theme');
-                }
-            });
         }
 
         // Amélioration de l'accessibilité
-        document.addEventListener('keydown', (e) => {
+        function initAccessibility() {
             // Navigation au clavier
-            if (e.key === 'Tab') {
-                document.body.classList.add('keyboard-navigation');
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    document.body.classList.add('keyboard-navigation');
+                }
+                
+                // Navigation par flèches dans le menu
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    const focusedElement = document.activeElement;
+                    if (focusedElement.closest('.sidebar-nav')) {
+                        e.preventDefault();
+                        const navLinks = Array.from(document.querySelectorAll('.sidebar-nav a'));
+                        const currentIndex = navLinks.indexOf(focusedElement);
+                        
+                        if (e.key === 'ArrowDown') {
+                            const nextIndex = (currentIndex + 1) % navLinks.length;
+                            navLinks[nextIndex].focus();
+                        } else {
+                            const prevIndex = currentIndex > 0 ? currentIndex - 1 : navLinks.length - 1;
+                            navLinks[prevIndex].focus();
+                        }
+                    }
+                }
+            });
+
+            document.addEventListener('mousedown', () => {
+                document.body.classList.remove('keyboard-navigation');
+            });
+
+            // Ajout d'attributs ARIA
+            document.querySelectorAll('.sidebar-nav a').forEach((link, index) => {
+                link.setAttribute('aria-label', `Navigation vers ${link.getAttribute('title')}`);
+            });
+        }
+
+        // Gestion responsive améliorée
+        function handleResponsiveChanges() {
+            const handleResize = debounce(() => {
+                const windowWidth = window.innerWidth;
+                const sidebar = document.querySelector('.sidebar');
+                
+                if (windowWidth > 768) {
+                    sidebar.style.transform = '';
+                }
+                
+                // Ajustement des particules selon la taille d'écran
+                if (windowWidth <= 480) {
+                    document.querySelectorAll('.particle').forEach((particle, index) => {
+                        if (index > 4) {
+                            particle.style.display = 'none';
+                        }
+                    });
+                } else {
+                    document.querySelectorAll('.particle').forEach(particle => {
+                        particle.style.display = 'block';
+                    });
+                }
+            }, 250);
+
+            window.addEventListener('resize', handleResize);
+            handleResize(); // Appel initial
+        }
+
+        // Optimisation des animations pour les appareils à faible puissance
+        function optimizeForPerformance() {
+            const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            
+            function handleReducedMotion(e) {
+                if (e.matches) {
+                    document.documentElement.style.setProperty('--animation-duration', '0.1s');
+                    document.querySelectorAll('.particle').forEach(particle => {
+                        particle.style.animation = 'none';
+                    });
+                }
             }
-        });
+            
+            mediaQuery.addEventListener('change', handleReducedMotion);
+            handleReducedMotion(mediaQuery);
+        }
 
-        document.addEventListener('mousedown', () => {
-            document.body.classList.remove('keyboard-navigation');
-        });
+        // Detection des gestes tactiles pour mobile
+        function initTouchGestures() {
+            let touchStartX = 0;
+            let touchStartY = 0;
+            
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            }, { passive: true });
+            
+            document.addEventListener('touchend', e => {
+                const touchEndX = e.changedTouches[0].screenX;
+                const touchEndY = e.changedTouches[0].screenY;
+                
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+                
+                // Swipe horizontal pour navigation entre sections
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                    if (deltaX > 0) {
+                        // Swipe vers la droite - section précédente
+                        navigateToSection('prev');
+                    } else {
+                        // Swipe vers la gauche - section suivante
+                        navigateToSection('next');
+                    }
+                }
+            }, { passive: true });
+        }
 
-        // Initialisation finale
+        function navigateToSection(direction) {
+            const sections = Array.from(document.querySelectorAll('section[id]'));
+            const currentSection = sections.find(section => {
+                const rect = section.getBoundingClientRect();
+                return rect.top <= 100 && rect.bottom >= 100;
+            });
+            
+            if (currentSection) {
+                const currentIndex = sections.indexOf(currentSection);
+                let targetIndex;
+                
+                if (direction === 'next') {
+                    targetIndex = (currentIndex + 1) % sections.length;
+                } else {
+                    targetIndex = currentIndex > 0 ? currentIndex - 1 : sections.length - 1;
+                }
+                
+                sections[targetIndex].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Initialisation de tous les modules
         document.addEventListener('DOMContentLoaded', () => {
-            // Toutes les fonctions d'initialisation
             updateActiveNav();
             initMobileMenu();
+            initLazyLoading();
+            initAccessibility();
+            handleResponsiveChanges();
+            optimizeForPerformance();
+            initTouchGestures();
+            
+            // Application du debounce aux événements de scroll
+            window.addEventListener('scroll', debounce(updateActiveNav, 10), { passive: true });
             
             // Animation retardée pour une meilleure UX
             setTimeout(() => {
                 document.body.classList.add('loaded');
             }, 100);
         });
+
+        // Gestion des erreurs globales
+        window.addEventListener('error', function(e) {
+            console.warn('Erreur détectée:', e.message);
+            // Ne pas afficher d'erreurs à l'utilisateur en production
+        });
+
+        // Service Worker pour la mise en cache (optionnel)
+        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker enregistré');
+                    })
+                    .catch(registrationError => {
+                        console.log('Échec d\'enregistrement du Service Worker');
+                    });
+            });
+        }
     </script>
 </body>
 </html>
